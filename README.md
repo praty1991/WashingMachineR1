@@ -4,8 +4,6 @@
   from terminal point : run the following commands
    1. mvn clean install
    
-   #OR
-   
    2. mvn spring-boot:run
 
 #There are 2 modal classes :-
@@ -25,27 +23,27 @@
 
   1. WashingMachineController
   
-#Controller class has below Api :-
+     #Controller class has below Api :-
 
-   You can call APIs via Postman
+      You can call APIs via Postman
 
-   Base URL : http://localhost:8080
+      Base URL : http://localhost:8080
 
-   1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
+    1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
   
-     GET /washingMachine - To get all the available washing machines, Sucess HTTP code=200, Fail code=404
+      GET /washingMachine - To get all the available washing machines, Sucess HTTP code=200, Fail code=404
      
-   2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
+    2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     POST /washingMachine/add - To add new Maching Machine, Success HTTP code=201, Fail code=400
+      POST /washingMachine/add - To add new Maching Machine, Success HTTP code=201, Fail code=400
      
-     Request Payload
-     {
-       "wmId" : 6,
-       "modelNo" : "6a",
-       "serialNo" : 6,
-       "wmName" : "abcd"
-     }
+      Request Payload
+      {
+        "wmId" : 6,
+        "modelNo" : "6a",
+        "serialNo" : 6,
+        "wmName" : "abcd"
+      }
      
    3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
   
