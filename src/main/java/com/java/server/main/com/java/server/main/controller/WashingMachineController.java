@@ -31,7 +31,7 @@ public class WashingMachineController {
 
 	// Fetch all Washing Machines
 	@RequestMapping(method = RequestMethod.GET, path = "/washingMachine")
-	@ResponseStatus(HttpStatus.CREATED)
+	@ResponseBody
 	public List<WashingMachineEntity> getWMMachineDetails() {
 		return WashingMachineImpl.getIntance().getWMDetails().orElseThrow(() -> new MissingHeaderInfoException("There is no washing machine found"));
 
@@ -47,7 +47,7 @@ public class WashingMachineController {
 
 	// Adding new Washing Machine
 	@RequestMapping(method = RequestMethod.POST, path = "/washingMachine/add")
-	@ResponseBody
+	@ResponseStatus(HttpStatus.CREATED)
 	public WashingMachineEntity addWMMachine(@RequestBody WashingMachineEntity washingMachineEntity) {
 		return WashingMachineImpl.getIntance().addWM(washingMachineEntity).orElseThrow(() -> new RecordNotFoundException("Washing Machine is not added"));
 
