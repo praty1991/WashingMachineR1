@@ -28,7 +28,7 @@ import com.java.server.main.service.WashingMachineImpl;
 public class WashingMachineController {
 
 	// Fetch all Washing Machines
-	@RequestMapping(method = RequestMethod.GET, path = "/washingMachine/allWachingMachines")
+	@RequestMapping(method = RequestMethod.GET, path = "/washingMachine")
 	public List<WashingMachineEntity> getWMMachineDetails() {
 		return WashingMachineImpl.getIntance().getWMDetails().orElseThrow(() -> new MissingHeaderInfoException("There is no washing machine found"));
 
