@@ -3,7 +3,9 @@
  #Step to build the Application
   from terminal point : run the following commands
    1. mvn clean install
+   
    #OR
+   
    2. mvnw spring-boot:run
 
 #There are 2 modal classes :-
@@ -27,19 +29,41 @@
 
    1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
   
-     URL : http://localhost:8080/washingMachine/allWachingMachine
+     GET /washingMachine/allWachingMachines - To get all the available washing machines
      
-   2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody(Post Method)
+   2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     URL : http://localhost:8080/washingMachine/add
+     POST /washingMachine/add - To add new Maching Machine
      
-   3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody(Post Mehtod)
+     Request Payload
+     {
+       "wmId" : 6,
+       "modelNo" : "6a",
+       "serialNo" : 6,
+       "wmName" : "abcd"
+     }
+     
+   3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     URL : http://localhost:8080/washingMachine/repair
+     POST /washingMachine/repair - To repaire existing washing machine
+     
+      Request Payload
+      {
+        "wmId" : 6,
+        "modelNo" : "6a",
+        "serialNo" : 6,
+        "wmName" : "abcd"
+      }
      
    4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody(Post Method)
   
-     URL : http://localhost:8080/washingMachine/start
+     POST /washingMachine/start - Starting Washing Machine
+     
+      Request Paylod
+       {
+         "washTime" : 5,
+         "spinTime" : 6
+       }
      
 #RestfulWebServicesApplication :- Application start from this point.
 
