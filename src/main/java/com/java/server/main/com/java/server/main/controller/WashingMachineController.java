@@ -1,5 +1,10 @@
 package com.java.server.main.controller;
 
+/*
+ * Controller Class having allWashingMachine,  AddWashingMAchine, RepairWashingMachine
+ * StartWashingMachine APIs
+ * */
+
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
