@@ -6,7 +6,7 @@
    
    #OR
    
-   2. mvnw spring-boot:run
+   2. mvn spring-boot:run
 
 #There are 2 modal classes :-
   1. WashingMachineEntity (Washing Machine Entities)
@@ -27,13 +27,17 @@
   
 #Controller class has below Api :-
 
+   You can call APIs via Postman
+
+   Base URL : http://localhost:8080
+
    1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
   
-     GET /washingMachine/allWachingMachines - To get all the available washing machines, Sucess HTTP code=200, Fail code=404
+     GET /washingMachine - To get all the available washing machines, Sucess HTTP code=200, Fail code=404
      
    2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     POST /washingMachine/add - To add new Maching Machine, Success HTTP code=200, Fail code=400
+     POST /washingMachine/add - To add new Maching Machine, Success HTTP code=201, Fail code=400
      
      Request Payload
      {
