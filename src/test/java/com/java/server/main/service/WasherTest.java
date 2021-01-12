@@ -1,6 +1,7 @@
-package com.java.server.main.service;
+package src.test.java.com.java.server.main.service;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.Optional;
 
@@ -25,8 +26,25 @@ public class WasherTest {
     {
     	int washTime=5;
     	int spinTime=10;
-    	Optional<String> res=WasherObj.startMachine(washTime, spinTime);
-    	assertNotNull(res);
+    	Optional<String> res = null;
+    	if(washTime>0 && spinTime>0)
+    	{
+    	res=WasherObj.startMachine(washTime, spinTime);
+    	}
+    	else
+    	{
+    		washTime=0;
+    		spinTime=0;
+    		res=WasherObj.startMachine(washTime, spinTime);
+    	}
+    	if(res.isPresent())
+    	{
+        	assertNotNull(res);	
+    	}
+    	else
+    	{
+    		assertNull(res);
+    	}
     }
 
 }
