@@ -29,11 +29,11 @@
 
    1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
   
-     GET /washingMachine/allWachingMachines - To get all the available washing machines
+     GET /washingMachine/allWachingMachines - To get all the available washing machines, Sucess HTTP code=200, Fail code=404
      
    2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     POST /washingMachine/add - To add new Maching Machine
+     POST /washingMachine/add - To add new Maching Machine, Success HTTP code=200, Fail code=400
      
      Request Payload
      {
@@ -45,7 +45,7 @@
      
    3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
   
-     POST /washingMachine/repair - To repaire existing washing machine
+     POST /washingMachine/repair - To repaire existing washing machine, Success HTTP code=200, Fail code=400
      
       Request Payload
       {
@@ -57,7 +57,7 @@
      
    4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody(Post Method)
   
-     POST /washingMachine/start - Starting Washing Machine
+     POST /washingMachine/start - Starting Washing Machine, Success HTTP code=200, Fail code=400
      
       Request Paylod
        {
