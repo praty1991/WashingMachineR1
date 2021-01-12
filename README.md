@@ -1,10 +1,10 @@
 # WashingMachine
 
 #Step to build the Application
-1. from terminal point : run the following commands
-1. mvn clean install
+from terminal point : run the following commands
+ 1. mvn clean install
 #OR
-2. mvnw spring-boot:run
+  2. mvnw spring-boot:run
 
 #There are 2 modal classes :-
  1. WashingMachineEntity (Washing Machine Entities)
@@ -15,20 +15,20 @@
 #Controller Class :-
  1. WashingMachineController
 Controller class has below Api :-
-# 1. getWMMachineDetails (Fetch all Washing Machines)
+  1. getWMMachineDetails (Fetch all Washing Machines)
      URL : http://localhost:8080/washingMachine/allWachingMachine
-# 2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
+  2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
      URL : http://localhost:8080/washingMachine/add
-# 3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
+  3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
      URL : http://localhost:8080/washingMachine/repair
-# 4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody
+  4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody
      URL : http://localhost:8080/washingMachine/start
 #RestfulWebServicesApplication :- Application start from this point.
-#There are 4 error and exception halding classes.
-1. CustomExceptionHandler
-2. MissingHeaderInfoException
-3. RecordNotFoundException
-4. ErrorResponse
+ #There are 4 error and exception halding classes.
+   1. CustomExceptionHandler
+   2. MissingHeaderInfoException
+   3. RecordNotFoundException
+   4. ErrorResponse
 #There are 4 Test classes have been written as below.
  1. WasherTest (Testing fuctionality of washing Machine)
  2. WashingMachineImplTest (Testing functionality of Storage Api)
