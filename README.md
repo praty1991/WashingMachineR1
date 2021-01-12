@@ -10,9 +10,14 @@
   1. WashingMachineEntity (Washing Machine Entities)
   2. StartWM (Washing Machine input Entities)
   
-#There are 2 service classes :-
+# There is one DAO class
+
+  1.WashingMachineDao (Stroring WMachine details)
+  
+#There are 3 service classes :-
   1. Washer :- Washing machine functions are written in this class
   2. WashingMachineImpl :- Washing Machines inbuild databse Api written inside this class
+  3. ResponseClass:- Response Class to hold the success response
   
 #Controller Class :-
 
@@ -20,19 +25,19 @@
   
 #Controller class has below Api :-
 
-   1. getWMMachineDetails (Fetch all Washing Machines)
+   1. getWMMachineDetails (Fetch all Washing Machines)(Get Method)
   
      URL : http://localhost:8080/washingMachine/allWachingMachine
      
-   2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody
+   2. addWMMachine(Adding new Washing Machine). it takes WashingMachineEntity as RequestBody(Post Method)
   
      URL : http://localhost:8080/washingMachine/add
      
-   3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody
+   3. repairWMMachine (Repairing Washing Machine). it takes WashingMachineEntity as RequestBody(Post Mehtod)
   
      URL : http://localhost:8080/washingMachine/repair
      
-   4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody
+   4. startWMMachine (Start washing clothes). it takes StartWM as RequestBody(Post Method)
   
      URL : http://localhost:8080/washingMachine/start
      
