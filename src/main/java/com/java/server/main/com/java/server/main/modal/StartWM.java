@@ -1,10 +1,13 @@
 package com.java.server.main.modal;
 
-//Entity Class to start washing machine
+/*
+ * Entity Class to start washing machine
+ * 
+ * */
 public class StartWM {
 
-	int washTime;
-	int spinTime;
+	private int washTime;
+	private int spinTime;
 	public int getWashTime() {
 		return washTime;
 	}

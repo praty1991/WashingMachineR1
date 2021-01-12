@@ -1,5 +1,9 @@
-package com.java.server.main.controller;
+package src.test.java.com.java.server.main.controller;
 
+/*
+ * Controller test class
+ * Testing control functionality
+ * */
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -11,17 +15,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
 
+import com.java.server.main.controller.WashingMachineController;
 import com.java.server.main.modal.StartWM;
 import com.java.server.main.modal.WashingMachineEntity;
+import com.java.server.main.service.ResponseClass;
 
 
 @RunWith(MockitoJUnitRunner.class)
 public class WashingMachineControllerTest {
 	
-	StartWM mockStartWM;
-	WashingMachineController washingMachineController;
-    WashingMachineEntity mockWashingMachineEntity;
+	private StartWM mockStartWM;
+	private WashingMachineController washingMachineController;
+	private WashingMachineEntity mockWashingMachineEntity;
 	 
     @Before
     public void init() {
@@ -38,7 +45,7 @@ public class WashingMachineControllerTest {
     @Test
     public void testRepairWMMachine()
     {
-        String responseEntity = washingMachineController.repairWMMachine(mockWashingMachineEntity);
+        ResponseEntity<ResponseClass> responseEntity = washingMachineController.repairWMMachine(mockWashingMachineEntity);
         assertNotNull(responseEntity);
     }
     @Test
@@ -52,7 +59,7 @@ public class WashingMachineControllerTest {
     public void teststartWMMachine()
     {
     	mockStartWM=mock(StartWM.class);
-        String responseEntity = washingMachineController.startWMMachine(mockStartWM);
+        ResponseEntity<ResponseClass> responseEntity = washingMachineController.startWMMachine(mockStartWM);
         assertNotNull(responseEntity);
     }
 

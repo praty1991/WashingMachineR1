@@ -1,4 +1,8 @@
 package com.java.server.main.exception;
+/*
+ * MissingHeaderInfoException Class
+ * 
+ * */
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
  

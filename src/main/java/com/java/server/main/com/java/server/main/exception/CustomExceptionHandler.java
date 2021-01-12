@@ -1,4 +1,9 @@
 package com.java.server.main.exception;
+
+/*
+ * Custom Exception Class, Handling Exceptions
+ * 
+ * */
 import java.util.ArrayList;
 import java.util.List;
 

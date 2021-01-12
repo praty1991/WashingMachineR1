@@ -1,5 +1,6 @@
-package com.java.server.main.service;
+package src.test.java.com.java.server.main.service;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 
@@ -10,8 +11,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
 
 import com.java.server.main.modal.WashingMachineEntity;
+import com.java.server.main.service.ResponseClass;
 import com.java.server.main.service.WashingMachineImpl;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -44,7 +47,7 @@ public class WashingMachineImplTest {
     public void updateWMTest()
     {
     	WashingMachineEntity mockWashingMachineEntity=mock(WashingMachineEntity.class);
-    	Optional<String> atualResult=washingMachineObj.updateWM(mockWashingMachineEntity);
+    	Optional<ResponseEntity<ResponseClass>> atualResult=washingMachineObj.updateWM(mockWashingMachineEntity);
     	assertNotNull(atualResult);
     	
     }

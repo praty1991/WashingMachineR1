@@ -1,4 +1,4 @@
-package com.java.server.main.exception;
+package src.test.java.com.java.server.main.exception;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -16,6 +16,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 
 import com.java.server.main.controller.WashingMachineController;
+import com.java.server.main.exception.CustomExceptionHandler;
+import com.java.server.main.exception.ErrorResponse;
+import com.java.server.main.exception.MissingHeaderInfoException;
+import com.java.server.main.exception.RecordNotFoundException;
 import com.java.server.main.modal.StartWM;
 import com.java.server.main.modal.WashingMachineEntity;
 import org.springframework.web.context.request.WebRequest;

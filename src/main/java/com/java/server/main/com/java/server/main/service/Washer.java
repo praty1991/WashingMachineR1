@@ -1,18 +1,34 @@
 package com.java.server.main.service;
 
+/*
+ * Washing Machine washer class and Maintaining states
+ * 
+ * 
+ * */
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 // washing functions
 public class  Washer
 {
 	 static Washer washerInstance;
 	 static String res;
-	 public Optional<String> startMachine(int washTime, int spinTime) {
+	 private String REQUEST_SUCCESSFUL = "REQUEST_SUCCESSFUL";
+	 public Optional<ResponseEntity<ResponseClass>> startMachine(int washTime, int spinTime) {
+		    res="";
 	        new On()
 	            .wash(washTime)
 	            .spin(spinTime)
 	            .turnOff();
-			return Optional.ofNullable(res);
+	        List<String> details = new ArrayList<>();
+	        details.add(res);
+	        ResponseClass error = new ResponseClass(REQUEST_SUCCESSFUL, details);
+	        return Optional.ofNullable(new ResponseEntity<>(error, HttpStatus.OK));
 	    }
 	 // States of the washing machine
 	    public abstract static class State {}

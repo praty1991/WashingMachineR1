@@ -1,11 +1,16 @@
 package com.java.server.main.modal;
 
+/*
+ * Washing Machine Modal Class
+ * 
+ * */
+
 public class WashingMachineEntity {
 	
-	int wmId;
-	String modelNo;
-	int serialNo;
-	String wmName;
+	private int wmId;
+	private String modelNo;
+	private int serialNo;
+	private String wmName;
 	
 	public int getWmId() {
 		return wmId;

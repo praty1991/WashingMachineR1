@@ -1,17 +1,17 @@
-package com.java.server.main.exception;
+package com.java.server.main.service;
 
 /*
- * Error Response Class, Format of the Error
+ * Response Class to hold the success response
  * 
  * */
+
 import java.util.List;
- 
-public class ErrorResponse
-{
+
+public class ResponseClass {
 	private String message;
     private List<String> details;
     
-    public ErrorResponse(String message, List<String> details) {
+    public ResponseClass(String message, List<String> details) {
         super();
         this.message = message;
         this.details = details;
